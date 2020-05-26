@@ -1,0 +1,32 @@
+1. Creating a Graph QL project .. It is a reading list application
+2. The tech stack is as follows
+    - Express JS ( Node ) for the backend 
+    - Setting up Graph QL on top of Express JS for Quering the DB
+        - Graph QL is a powerful query language which can be used with Rest APIs to make the query more optimized 
+         For example getting book and author details 
+            Traditionally you would have to make an API call for Book Detail Data 
+            Based on that data we would get author id and then get author details 
+            Graph QL makes it easy to combine these two requests into a simple Graph QL Query which  gets all required data in a single query
+    - Mlab / Mongo DB for storing the date
+    - On Front End using React , specifically apollo client library
+        Apollo Client is the ultra-flexible, community-driven GraphQL client for React, JavaScript, and native platforms.
+    - Graphiql can be used to test queries
+     
+
+3. Package Details 
+    - For Setting up graphl , we need to use two packages graphql and express-graphql
+    Inside your app.js we need to use express-graphql which is used as a middle ware function. we need a way to create a graphql schema on a particular route 
+
+4. We need to define a schema inside schema folder , here we will use graphql package.. here we will define the schema for our GraphQL
+
+Graph QL Schema exports two things 
+    1. query (querying the database )
+    2. mutations (add / edit / delete) data
+
+In defining query , you need to define graphQlObjecttype rootquerytype from grapql , this object will define different schemas , fields etc.. 
+we also need to use graphql data types to define fields in the schema that we create . 
+
+On top of this we need to define Mongo db schema and use those schema and models inside graphql query functions 
+
+
+On The Front End , we will used GraphQL Client called as Apollo which is used to query graphql server
